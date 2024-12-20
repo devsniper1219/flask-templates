@@ -3,9 +3,36 @@
 {% block title %}Inicio{% endblock %}
 
 {% block content %}
-<div class="main-view">
-    <h1>Hello World</h1>
-    <p>Hi folks, this is a example to deploy Flask with Vercel using CSS, JS and imagen.</p>
-    <img src="app/static/images/flask.png" alt="Flask">
-</div>
+    <header>  
+        <h1>Zip Code Input Interface</h1>  
+    </header>  
+    <main>   
+        <div class="input-container">  
+            <input type="text" id="zipCodeInput" placeholder="Enter zip codes separated by spaces" />  
+            <button id="submitButton">Submit</button>  
+        </div>   
+
+        <!-- Progress Container -->  
+        <div id="progressContainer" class="progress-container" style="display:none;">  
+            <h3 id="progressMessage"></h3>  
+            <div class="progress-bar">  
+                <div id="progressBar" class="progress" style="width: 0%;"></div>  
+            </div>  
+        </div>  
+        <div id="resultsContainer" style="display:none;">  
+            <table id="resultsTable" border="1">  
+                <thead>  
+                    <tr>  
+                        <th>Name</th>  
+                        <th>Email</th>  
+                        <th>Phone</th>  
+                        <th>Total Sale</th>  
+                        <th>Total Volume</th>  
+                        <th>Median Sales Price</th>  
+                    </tr>  
+                </thead>  
+                <tbody id="resultsBody"></tbody>  
+            </table>  
+        </div>  
+    </main>
 {% endblock %}
