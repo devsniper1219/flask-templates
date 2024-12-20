@@ -203,8 +203,5 @@ def download_file():
         return send_file("result.xlsx", as_attachment=True)  
     return jsonify({"message": "File not ready yet."})  
 
-if __name__ == '__main__':  
-    app.run(debug=False)
-
 if __name__ == '__main__':
     app.run(debug=True)
